@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style>
+			*{margin:0 ;padding:0}
+			html,body{width:100%;height:100%;}
+			header,footer{
+				width:100%;
+				height:100px;
+				background:orange;
+			}
+			body{
+					display: -webkit-box;
+					-webkit-box-orient: vertical;
+				}
+			section{
+				width:100%;
+				-webkit-box-flex: 1;
+				overflow: hidden;
+			}
+			section ul{
+				width:100%;
+				height:100%;
+			}
+			section ul li{
+				width:100%;
+				height:200px;
+				line-height: 200px;
+				border-bottom: 1px solid #ccc;
+			}
+		</style>
+	</head>
+	<body>
+		<header></header>
+		<section>
+			<ul>
+				<!--<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>-->
+			</ul>
+		</section>
+		<footer></footer>
+	</body>
+	
+	<script type="text/javascript" src="js/libs/zepto-1.1.6.min.js" ></script>
+	<script type="text/javascript" src="js/libs/iscroll.js" ></script>
+	<script type="text/javascript" src="js/libs/touch.min1.js" ></script>
+	<script>
+		var myScroll = new IScroll('section',{})
+			
+		$.ajax({
+			type:"get",
+			url:"test1.json",
+			async:true,
+			dataType:"json",
+			success:function(data){
+				var bbb='';
+			$.each(data.title, function(i) {
+					
+					bbb+='<li>'+data.title[i]+'</li>';
+				});
+				$('ul').append(bbb);
+				myScroll.refresh();
+			}
+		});
+		$(document).on('touchend',function(){
+			if(myScroll.y>20){
+				alert("刷新成功！")
+			}
+			if(myScroll.y<myScroll.maxScrollY-20){
+				$.ajax({
+				type:"get",
+				url:"test1.json",
+				async:true,
+				dataType:"json",
+				success:function(data){
+					var datas='';
+				$.each(data.author, function(i) {
+						datas+='<li>'+data.author[i]+'</li>';
+					});
+					$('ul').append(datas);
+					myScroll.refresh();
+				}
+				});	
+			}
+			
+		})
+	</script>
+</html>

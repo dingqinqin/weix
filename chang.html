@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title></title>
+<link rel="stylesheet" href="js/libs/swiper-3.3.1.min.css" />
+<link rel="stylesheet" href="js/libs/animate.css" />
+<script type="text/javascript" src="js/libs/zepto-1.1.6.min.js" ></script>
+<script type="text/javascript" src="js/libs/swiper-3.3.1.jquery.min.js" ></script>
+<script type="text/javascript" src="js/libs/swiper.animate1.0.2.min.js" ></script>
+<script type="text/javascript" src="js/libs/rem.js" ></script>
+<style type="text/css">
+*{margin:0;padding:0;}
+#box{width:100vw;height:100vh;overflow:hidden;}
+.sli1,.sli2,.sli3{width:100vw;height:100vh;}
+.sli1{background:url(img/{971C23E4-1F4E-D78C-CDA8-E250791E4014}.jpg) center no-repeat;}
+.sli2{background:yellow;}
+.sli3{background:olivedrab;}
+.div1{width:4rem;height:5rem;margin:0.3rem auto;}
+.div1 img{width:4rem;height:5rem;}
+.p1{text-align:center;color:#fff;font-size:0.4rem;margin-top:2rem;}
+.div2{width:4rem;height:4rem;position: relative;margin:0.5rem auto;}
+.div2 img:nth-child(1){width:4rem;height:4rem;position:absolute;}
+.div2 img:nth-child(2){width:4rem;height:4rem;position:absolute;left:0.2rem;}
+#yuan{width:50px;height:50px;border:1px solid #FFFFFF;position:fixed;top:10px;right:10px;border-radius:50%;z-index: 888;
+font-size:25px;line-height:50px;text-align:center;
+animation:yuan 3s linear infinite;
+}
+
+@keyframes yuan{
+	from{transform:rotate(0deg);}
+	to{transform: rotate(360deg);}
+}
+
+
+
+</style>
+</head>
+<body>
+<div class="swiper-container" id="box">
+	<audio src="../swiper/爱囚.MP3" autoplay loop></audio>
+	<div id="yuan">music</div>
+    <div class="swiper-wrapper">
+        <div class="swiper-slide sli1">
+        		<div class="div1 ani" swiper-animate-effect="aaa" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"><img src="img/cover.png" alt="" /></div>
+        		<p class="p1 ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">最牛上市公司</p>
+        </div>
+        <div class="swiper-slide sli2">
+        		<div class="div2">
+        			<img class="ani" src="img/circle-design.png" alt=""  swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.3s" />
+        			<img class="ani" src="img/people_production.png" alt=""  swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="0.3s" />
+        		</div>
+        		<p class="p1 ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">IT职场精英</p>
+        		
+        </div>
+        <div class="swiper-slide sli3">
+        		<div class="div1 ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"><img src="img/cover.png" alt="" /></div>
+        		<p class="p1 ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">最牛上市公司</p>
+        </div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+</div>
+	
+	
+</body>
+<script type="text/javascript">
+var mySwiper = new Swiper ('.swiper-container', {
+    direction: 'vertical',
+    loop: true,
+    
+    // 如果需要分页器
+    pagination: '.swiper-pagination',
+    onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+	    swiperAnimateCache(swiper); //隐藏动画元素 
+	    swiperAnimate(swiper); //初始化完成开始动画
+	  }, 
+	  onSlideChangeEnd: function(swiper){ 
+	    swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+	  } 
+    
+})    
+
+
+$('#yuan').click(function(){
+	if($('audio')[0].paused){
+		$('audio')[0].play()
+		$('#yuan').css('animation-play-state','')
+	}else{
+		$('audio')[0].pause()
+		$('#yuan').css('animation-play-state','paused')
+		
+	}
+})
+
+
+
+</script>
+</html>

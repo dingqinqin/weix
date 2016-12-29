@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="js/libs/swiper-3.3.1.min.css" />
+		<script type="text/javascript" src="js/libs/jquery-1.11.0.js" ></script>
+		<script type="text/javascript" src="js/libs/swiper-3.3.1.jquery.min.js" ></script>
+		<style>
+			*{margin:0;padding:0}
+			#box{width:600px;height:350px;margin:20px auto;}
+		.sl{
+			width:600px;
+			height:350px;
+			text-align: center;
+			line-height: 350px;
+			font-size: 35px;
+		}
+		.sl1{
+			background:yellow;
+		}
+		.sl2{
+			background:#FFA500;
+		}
+		.sl3{
+			background:#FF0000;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="swiper-container" id="box">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide sl sl1">slide1</div>
+				<div class="swiper-slide sl sl2">slide2</div>
+				<div class="swiper-slide sl sl3">slide3</div>
+			</div>
+			<div class="swiper-pagination"></div>
+			 <!-- 如果需要导航按钮 --> 
+			<div class="swiper-button-prev"></div> 
+			<div class="swiper-button-next"></div> 
+			<!-- 如果需要滚动条 --> 
+			<!--<div class="swiper-scrollbar"></div> -->
+		</div>
+		
+	</body>
+	<script>
+	var mySwiper = new Swiper ('.swiper-container', {
+//		direction: 'horizontal/vertical', 
+		autoplay: 1000,
+		autoplayDisableOnInteraction:false,
+		loop: true,
+		keyboardControl : true,
+		//speed:500,
+		//freeMode:true,自由滑动
+		//freeModeSticky  ： true;
+		//effect : 'fade',淡入淡出
+		 //effect : 'cube', 立体
+		 //effect : 'coverflow',翻书
+		// effect : 'flip',翻转
+		// 如果需要分页器
+		 pagination: '.swiper-pagination', 
+		 paginationClickable:true,
+		// 如果需要前进后退按钮 
+		nextButton: '.swiper-button-next', 
+		prevButton: '.swiper-button-prev', 
+		
+		// 如果需要滚动条
+//		 scrollbar: '.swiper-scrollbar',
+		 })
+	</script>
+</html>

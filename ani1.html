@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="js/libs/swiper-3.3.1.min.css" />
+		<link rel="stylesheet" href="js/libs/animate.css" />
+		<script type="text/javascript" src="js/libs/zepto-1.1.6.min.js" ></script>
+		<script type="text/javascript" src="js/libs/swiper-3.3.1.jquery.min.js" ></script>
+		<script type="text/javascript" src="js/libs/swiper.animate1.0.2.min.js" ></script>
+		<script type="text/javascript" src="js/libs/rem.js" ></script>
+		<style>
+			*{margin: 0;padding: 0;}
+			#main{width:100vw;height:100vh;overflow: hidden;}
+			.s1,.s2,.s3{
+				width:100vw;height:100vh;
+			}
+			.s1{
+				background:url(img/{971C23E4-1F4E-D78C-CDA8-E250791E4014}.jpg) center no-repeat;
+				background-size: cover;
+			}
+			.s2{background:yellow;}
+			.s3{background:purple;}
+			.s4{background:olivedrab;}
+			.div1{
+				width:4rem;
+				height:5rem;
+				margin:0.4rem auto;
+				
+			}
+			.div1 img{
+				width:4rem;
+				height:5rem;
+				
+			}
+			.p1{
+				text-align: center;
+				color:#fff;
+				font-size: 0.4rem;
+				font-weight: 900;
+				margin-top:2.0rem;
+			}
+			.div2{
+				width:4rem;
+				height:4rem;
+				position: relative;
+				margin:0.4rem auto;
+			}
+			.div2 img{
+				width:4rem;
+				height:4rem;
+				
+			}
+			.div2 img:nth-child(1){
+				position: absolute;
+			}
+			.div2 img:nth-child(2){
+				position: absolute;
+				
+			}
+			.p2{
+				width:5rem;
+				height:5rem;
+				position:relative
+				
+			}
+			.p2 img{
+				width:5rem;
+				height:5rem;
+				position: absolute;
+				left:0.5rem;
+			}
+			.div3{
+				width:4rem;
+				height:4rem;
+				position: relative;
+				margin:0.2rem auto;
+				
+			}
+			.div3 img{
+				width:4rem;
+				height:4rem;
+				margin:0.3rem auto;
+				
+			}
+			.div3 img:nth-child(1){
+				position: absolute;
+				
+				
+			}
+			.div3 img:nth-child(2){
+				position: absolute;
+				
+			}
+			.p3{
+				width:4rem;
+				height:7.3rem;
+				position: absolute;
+			}
+			.p3 img:nth-child(1){
+				width:5rem;
+				height:5rem;
+				position: absolute;
+				top:0.8rem;
+				left:0.5rem;
+				
+			}
+			.p3 img:nth-child(2){
+				width:100vw;
+				height:2rem;
+				position: absolute;
+				bottom:0;
+				left:0;
+			}
+			.div4{
+				width:4rem;
+				height:4rem;
+				position: relative;
+				margin:0.2rem auto;	
+			}
+			.div4 img:nth-child(1){
+				width:4rem;
+				height:4rem;
+				position: absolute;
+				
+				
+			}
+			.div4 img:nth-child(2){
+				width:4rem;
+				height:4rem;
+				position: absolute;
+				
+			}
+			.p4{
+				width:4rem;
+				height:7.3rem;
+				position: absolute;
+			}
+			.p4 img{
+				width:5rem;
+				height:5rem;
+				position: absolute;
+				top:0.8rem;
+				left:0.5rem;
+				
+			}
+			
+			#yue{
+			position: fixed;
+			right:0.1rem;
+			top:0.1rem;
+			width:1.0rem;
+			text-align: center;
+			line-height:1.0rem;
+			z-index: 100;
+			border-radius:50%;
+			height:1.0rem;
+			border:2px solid #fff;
+			font-size: 25px;	
+			animation: yuan 5s linear infinite;
+			}
+			@keyframes yuan{
+				from{transform:rotate(0deg);}
+				to{transform: rotate(360deg);}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="swiper-container" id="main">
+		   <audio src="css/爱囚.MP3" autoplay="autoplay" loop="loop"></audio>
+		   <div id="yue">音乐</div>
+		   <div class="swiper-wrapper">
+		        <div class="swiper-slide s1">
+		        	<div  class="ani div1" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+		        		<img src="img/cover.png"/>
+		        	</div>
+		        	<p class="ani p1" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">最牛上市公司</p>
+		        </div>
+		        <div class="swiper-slide s2">
+		        	<div class="div2">
+		        		<img class="ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" src="img/circle-design.png" />
+		        		<img class="ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s" src="img/people_production.png" />
+		        	</div>
+		        	<p class="p2">
+		        	<img class="ani" swiper-animate-effect="zoomInDown" swiper-animate-duration="1s" swiper-animate-delay="0.5s" src="img/introduction.png" />
+		        	</p>
+		        </div>
+		        <div class="swiper-slide s3">
+		        	<div class="div3">
+		        		<img  class="ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.5s"  src="img/circle.png" />
+		        		<img  class="ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="0.5s" src="img/people.png" />
+		        		
+		        	</div>
+		        	<p class="p3">
+		        		<img class="ani" swiper-animate-effect="rollIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s"  src="img/introduction_design.png" />
+		        		<img class="ani" swiper-animate-effect="slideInUp" swiper-animate-duration="1s" swiper-animate-delay="0.5s" src="img/pic_shadow_production.png" />	
+		        		
+		        	</p>
+		        </div>
+		          <div class="swiper-slide s4">
+		        	<div class="div4">
+		        		<img class="ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" src="img/circle-production.png" />
+		        		<img class="ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" src="img/people_design.png" />
+		        	</div>
+		        	<p class="p4">
+		        	<img  class="ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="1s" src="img/introduction_production.png" />	
+		        	</p>
+		        </div>
+		    </div>
+		     <div class="swiper-pagination"></div>
+		</div>
+	</body>
+	<script>
+		 var mySwiper = new Swiper ('.swiper-container', {
+		    direction: 'vertical',
+		    //loop: true,
+		   // autoplay:3000,
+		   
+		     pagination: '.swiper-pagination',
+		     onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+			    swiperAnimateCache(swiper); //隐藏动画元素 
+			    swiperAnimate(swiper); //初始化完成开始动画
+			  }, 
+			  onSlideChangeEnd: function(swiper){ 
+			    swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+			  } 
+			  
+		  })
+		 
+		 
+		$('#yue').click(function(){
+			if($('audio')[0].paused){
+				$('audio')[0].play()
+				$('#yue').css('animation-play-state','')
+			}else{
+				$('audio')[0].pause()
+				$('#yue').css('animation-play-state','paused')
+				
+			}
+				 })
+	</script>
+</html>
